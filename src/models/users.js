@@ -13,10 +13,10 @@ const UserModel = sequelize.define('user', {
     },
     name: {
         type: Sequelize.DataTypes.STRING(100),
-        allowNull: false
+        allowNull: true
     }
 }, {
-    timestamps: true,
+    timestamps: false,
     tableName: 'users'
 })
 

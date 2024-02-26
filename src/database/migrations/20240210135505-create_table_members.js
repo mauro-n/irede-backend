@@ -20,7 +20,8 @@ module.exports = {
       },
       email: {
         type: Sequelize.DataTypes.STRING(255),
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
       pw_hash: {
         type: Sequelize.DataTypes.STRING(255),

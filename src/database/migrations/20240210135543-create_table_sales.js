@@ -18,6 +18,10 @@ module.exports = {
           key: 'member_id'
         }
       },
+      status: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false       
+      },
       created_at: {
         type: Sequelize.DataTypes.DATE,
         allowNull: false

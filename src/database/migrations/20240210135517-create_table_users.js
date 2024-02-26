@@ -15,16 +15,8 @@ module.exports = {
       },
       name: {
         type: Sequelize.DataTypes.STRING(100),
-        allowNull: false
-      },
-      created_at: {
-        type: Sequelize.DataTypes.DATE,
-        allowNull: false
-      },
-      updated_at: {
-        type: Sequelize.DataTypes.DATE,
-        allowNull: false
-      }
+        allowNull: true
+      }      
     })
   },
 
