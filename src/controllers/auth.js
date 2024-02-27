@@ -13,6 +13,8 @@ class AuthController {
             const userData = await authService.authenticateWithEmailPw(email, pw)
             return res.json(userData)
         } catch (err) {
+            console.log('ERRO---------------------')
+            console.log(err)
             if (err instanceof AuthenticationError) {
                 return res.status(err.status).json({ error: err.message })
             }

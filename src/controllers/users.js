@@ -46,6 +46,8 @@ class UserController {
 
             res.status(201).json(response)
         } catch (err) {
+            console.log('ERRO---------------------')
+            console.log(err)
             res.status(500).json({ error: err })
         }
     }
