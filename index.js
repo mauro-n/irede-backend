@@ -29,6 +29,7 @@ class App {
         this.app.use('/auth', authRoutes)
         this.app.use('/orders', orderRoutes)
         this.app.use('/categories', categoryRoutes)
+        this.app.use('*', (req, res) => res.status(404).json({ error: 'Not found' }))
     }
 
     run() {
