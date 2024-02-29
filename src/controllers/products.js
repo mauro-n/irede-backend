@@ -1,17 +1,21 @@
 const CategoryModel = require("../models/categories");
 const ProductModel = require("../models/products");
+const ProductService = require("../services/ProductService");
 
 class ProductController {
     async index(req, res) {
+        const { categoryId } = req.query
         try {
-            const products = await ProductModel.findAll({
-                include: {
-                    model: CategoryModel
-                }
-            })
-
-            res.status(200).json(products)
+            let data
+            if (!categoryId || categoryId === 'all' || categoryId === '1') {
+                data = await ProductService.index()
+                return res.status(200).json(data)
+            } else {
+                data = await ProductService.getByCategory(categoryId)
+                return res.status(200).json(data)
+            }
         } catch (err) {
+            console.log(err)
             res.status(500).json({ error: err.message })
         }
     }
