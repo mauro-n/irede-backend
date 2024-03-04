@@ -83,7 +83,7 @@ module.exports = {
       description: 'e-rede',
       created_at: '1999-01-08',
       updated_at: '1999-01-08',
-      img: 'https://irede-ecommerce.s3.amazonaws.com/products/sandal2-min.jpeg',
+      img: 'https://irede-ecommerce.s3.amazonaws.com/products/sandal2.jpeg',
     }, {
       id: 10,
       title: 'Sapatos Brisa EcoFusion Leve',
