@@ -21,14 +21,6 @@ class AuthController {
             return res.status(500).json({ error: err.message })
         }
     }
-
-    async logout() {
-
-    }
-
-    async whoami(req, res) {
-        return res.json({ message: 'right' })
-    }
 }
 
 module.exports = new AuthController()

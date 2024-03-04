@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const router = Router()
-const categoryController = require('../controllers/categories')
+const categoryController = require('../controllers/Categories')
 
 router.get('/', categoryController.index)
 

@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const router = Router()
-const orderController = require('../controllers/orders')
+const orderController = require('../controllers/Orders')
 const authenticated = require('../middleware/authenticated')
 
 router.get('/', authenticated, orderController.index)
